@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
-
 import Home from './components/Home'
 import About from './components/About'
 import Packages from './components/Packages'
@@ -28,6 +27,14 @@ function App() {
                 <Link to='/packages'>Our Packages</Link>
               </li>
             </ul>
+          </div>
+
+          <div>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/about' element={<About />} />
+              <Route path='/packages' element={<Packages packages={packages} />} />
+            </Routes>
           </div>
 
         </header>
